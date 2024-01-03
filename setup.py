@@ -25,12 +25,10 @@ install_requires=[]
 with open(os.path.join(__rootdir__,'requirements.txt'),'r') as fp:
     install_requires = [d.strip() for d in fp.readlines()]
     fp.close()
-    
-import rasta
 
 setup(
     name = "pyrasta",
-    version = rasta.version.version,
+    version = "0.0.1",
     author = "Biswajit Satapathy",
     author_email = "biswajit2902@gmail.com",
     description = ("PLP and RASTA MFCC in Python"),
