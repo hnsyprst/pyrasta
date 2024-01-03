@@ -24,7 +24,7 @@ if (sys.version_info[0] == 2 and sys.version_info[1] < 7) or (sys.version_info[0
     sys.exit('Sorry, Python < 2.7 is not supported')
 
 install_requires=[]
-with open(os.path.join(__rootdir__,'requirement.txt'),'r') as fp:
+with open(os.path.join(__rootdir__,'requirements.txt'),'r') as fp:
     install_requires = [d.strip() for d in fp.readlines()]
     fp.close()
 
