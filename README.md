@@ -8,7 +8,7 @@ This is python implementation of RASTA-PLP (Ref. https://www.ee.columbia.edu/~dp
 2) MFCC (Mel-Frequency Cepstral Coefficients) 
 
 # Dependecies
-Here are [dependecies](requirement.txt).
+Here are [dependecies](requirements.txt).
 
 # License
 

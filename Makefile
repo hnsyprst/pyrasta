@@ -7,7 +7,7 @@ all: install
 	@echo "Compilation Successful and installed to local distribution. \nTo install as global application run 'make deploy'."
 
 install:
-	pip install -r requirement.txt
+	pip install -r requirements.txt
 	python setup.py install
 
 # uninstall the Application
