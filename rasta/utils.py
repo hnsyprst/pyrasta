@@ -92,7 +92,7 @@ def powspec(x, fs = 8000,
     nfft = int(np.power(2, np.ceil(np.log2(winlen_in_sec * fs))))
     
     f, t, specgm = signal.stft(x, fs, nfft=nfft, nperseg=win_length, noverlap=win_length-hop_length, padded=False)
-    specgm = specgm.squeeze(0)
+    specgm = specgm.T
 
     pow_spec = np.power(np.abs(specgm), 2)
     if dither:
