@@ -6,8 +6,6 @@ from subprocess import call
 from setuptools import setup, find_packages
 from shutil import copytree, rmtree, ignore_patterns, copy, copyfile
 
-import rasta
-
 __this__='pyrasta'
 __pypath__ = sys.executable
 __pybin__="/".join(__pypath__.split('/')[0:-1])
@@ -27,6 +25,8 @@ install_requires=[]
 with open(os.path.join(__rootdir__,'requirements.txt'),'r') as fp:
     install_requires = [d.strip() for d in fp.readlines()]
     fp.close()
+    
+import rasta
 
 setup(
     name = "pyrasta",
