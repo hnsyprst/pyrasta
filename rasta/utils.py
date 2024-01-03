@@ -90,8 +90,9 @@ def powspec(x, fs = 8000,
 
     # next power of two of window length is NFFT
     nfft = int(np.power(2, np.ceil(np.log2(winlen_in_sec * fs))))
-
-    specgm,f,t = specgram(x, nfft=nfft, fs=fs, overlap = win_length-hop_length, window=np.hamming(win_length))
+    
+    f, t, specgm = signal.stft(x, fs, nfft=nfft, nperseg=win_length, noverlap=win_length-hop_length)
+    specgm = specgm[0:].squeeze(0)
 
     pow_spec = np.power(np.abs(specgm), 2)
     if dither:
