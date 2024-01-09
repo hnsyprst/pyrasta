@@ -91,7 +91,7 @@ def powspec(x, fs = 8000,
     # next power of two of window length is NFFT
     nfft = int(np.power(2, np.ceil(np.log2(winlen_in_sec * fs))))
     
-    f, t, specgm = signal.stft(x, fs, nfft=nfft, nperseg=win_length, noverlap=win_length-hop_length, padded=False)
+    f, t, specgm = signal.stft(x, fs, nfft=nfft, nperseg=win_length, noverlap=win_length-hop_length, padded=False, boundary=None)
     specgm = np.moveaxis(specgm, -1, -2)
 
     pow_spec = np.power(np.abs(specgm), 2)
